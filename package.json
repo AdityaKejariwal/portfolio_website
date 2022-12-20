@@ -1,0 +1,14 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio Website",
+  "main": "index.js",
+  "scripts": {
+    "compile":"sass -w --no-source-map sass/:dist/css/"
+  },
+  "author": "Aditya Kejariwal",
+  "license": "MIT",
+  "dependencies": {
+    "sass": "^1.57.1"
+  }
+}
