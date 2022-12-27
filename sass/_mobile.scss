@@ -44,7 +44,7 @@
             padding: 0.3rem 0 !important; 
             @include easeOut;
             &:hover{
-                color: $secondary-color;
+                color: $secondary-color ;
             }
         }
     }
@@ -56,6 +56,16 @@
             width: 150px !important;
             height: 150px !important;
         }
+    }
+
+    .about-info{
+        grid-template-areas: 
+        'bioimage'
+        'bio'
+        'job1'
+        'job2'
+        'job3';
+        grid-template-columns: 1fr;
     }
 }
 //Smartphones like Iphone 

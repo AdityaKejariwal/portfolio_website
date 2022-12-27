@@ -4,6 +4,9 @@ $show-home-image: True;
 $home-image:url('../img/bg2.jpg');
 $background-opacity: 0.9;
 
+:export{
+    primaryColor: $primary-color;
+}
 
 @mixin easeOut {
     transition: all 0.5s ease-out;
@@ -24,9 +27,19 @@ $background-opacity: 0.9;
                 width: 100%;
                 height: 100%;
                 z-index: -1;
-                background: rgba(rgb(61, 60, 60), $background-opacity);
+                background: rgba($primary-color, $background-opacity);
             }
         }
+    }
+}
+
+//Trying to implement a color switcher
+@function set-text-color($color){
+    @if (lightness($color) > 40){
+        @return black;
+    }
+    @else{
+        @return white;
     }
 }
 
