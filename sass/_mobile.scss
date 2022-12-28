@@ -1,6 +1,8 @@
 //Widescreens like TVs
 @include mediaXLg{
-
+    .projects{
+        grid-template-columns: repeat(4,1fr);
+    }
 }
 
 //Desktops & Laptops
@@ -16,6 +18,9 @@
         }
     }
 
+    .projects{
+        grid-template-columns: repeat(3,1fr);
+    }
 }
 //Tablets & Ipads
 @include mediaMd{
@@ -67,6 +72,10 @@
         'job3';
         grid-template-columns: 1fr;
     }
+
+    .projects{
+        grid-template-columns: repeat(2,1fr);
+    }
 }
 //Smartphones like Iphone 
 @include mediaSm{
@@ -81,5 +90,8 @@
         content: "\a";
         white-space: pre;
     }
-    
+
+    .projects{
+        grid-template-columns: 1fr;
+    }
 }

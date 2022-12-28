@@ -182,7 +182,7 @@ header {
 
 main {
   padding: 4rem;
-  min-height: calc(100% - 60px);
+  min-height: calc(100% - 40px);
 }
 main#home {
   overflow: hidden;
@@ -237,14 +237,84 @@ main .icons a:hover {
   padding: 0.5rem;
 }
 
+.projects {
+  display: grid;
+  gap: 0.7rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+.projects img {
+  width: 100%;
+  height: 75%;
+  border: #fff 3px solid;
+}
+.projects img:hover {
+  opacity: 0.5;
+  border-color: #ee411a;
+  transition: all 0.5s ease-out;
+}
+
+.btn, .btn-light, .btn-dark {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+}
+.btn:hover, .btn-light:hover, .btn-dark:hover {
+  background: #ee411a;
+}
+
+.btn-dark {
+  background: #080201;
+  color: #fff;
+}
+.btn-dark:hover {
+  color: #333;
+}
+
+.btn-light {
+  background: white;
+  color: #333;
+}
+.btn-light:hover {
+  color: #fff;
+}
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+}
+.boxes div {
+  font-size: 2rem;
+  border: 2px solid #fff;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 3rem;
+  transition: all 0.5s ease-out;
+}
+.boxes div:hover {
+  padding: 0.5rem 1.5rem;
+  background: #ee411a;
+  color: black;
+}
+.boxes div:hover span {
+  color: black;
+}
+
 #main-footer {
   text-align: center;
   padding: 1rem;
   background: #2b2b2b;
   color: white;
-  height: 60px;
+  height: 40px;
 }
 
+@media screen and (min-width: 1171px) {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   main#home h1 {
     font-size: 6rem;
@@ -252,6 +322,9 @@ main .icons a:hover {
   }
   h2.sm-heading {
     margin-bottom: 3rem !important;
+  }
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media screen and (max-width: 768px) {
@@ -291,6 +364,9 @@ main .icons a:hover {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr;
   }
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media screen and (max-width: 500px) {
   main#home h1, .icons {
@@ -303,5 +379,8 @@ main .icons a:hover {
   .low-sm::before {
     content: "\a";
     white-space: pre;
+  }
+  .projects {
+    grid-template-columns: 1fr;
   }
 }
