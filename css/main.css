@@ -332,12 +332,14 @@ main .icons a:hover {
     padding: 0 0 0 1rem !important;
     margin: 0 !important;
   }
-  ul.menu-nav, div.menu-branding {
+  ul.menu-nav,
+  div.menu-branding {
     float: none;
     width: 100%;
     min-height: 0;
   }
-  ul.menu-nav.show, div.menu-branding.show {
+  ul.menu-nav.show,
+  div.menu-branding.show {
     transform: translate3d(0, 0, 0) !important;
   }
   .menu-nav {
@@ -357,6 +359,7 @@ main .icons a:hover {
     transform: translate3d(100%, 0, 0) !important;
   }
   .menu-branding .portrait {
+    background: url("../img/self_small.jpg");
     width: 150px !important;
     height: 150px !important;
   }
@@ -369,8 +372,17 @@ main .icons a:hover {
   }
 }
 @media screen and (max-width: 500px) {
-  main#home h1, .icons {
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-size: 3rem;
+  }
+  main#home h1,
+  .icons {
     padding: 0 0 0 1rem !important;
+  }
+  .menu-btn {
+    right: 16px;
   }
   main#home h1 {
     font-size: 4rem;
@@ -382,5 +394,12 @@ main .icons a:hover {
   }
   .projects {
     grid-template-columns: 1fr;
+    margin-right: 1rem;
+  }
+  .boxes div {
+    padding: 0.5rem 1.5rem;
+    font-size: 0.7rem !important;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
   }
 }
